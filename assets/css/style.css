@@ -1,0 +1,43 @@
+h1 {
+	font-size: 36px;
+	text-align: center;
+	font-weight: bold;
+	font-family: helvetica, arial;
+	color: white;
+
+}
+
+h2, #wins, #losses {
+	font-size:24px;
+	color: white;
+}
+
+body {
+	padding-bottom: 40px;
+	height: 100%;
+	background-color: #4aaaa5;
+	background-image: url("../images/background.jpg");
+}
+
+#footer {
+	padding-top: 20px;
+	border-top: 4px solid;
+  	border-top-color:#4aaaa5;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    height: 40px;
+    left: 0px;
+    text-align: center;
+    color:white;
+    background-color: #666;
+}
+
+#yourScore {
+	padding-bottom: 30px;
+}
+
+html {
+	position:relative;
+	min-height:100%;
+}
