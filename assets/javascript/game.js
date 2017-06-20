@@ -26,61 +26,62 @@ $(document).ready(function () {
       gem3 = Math.floor(Math.random() * 12) + 1;
       gem4 = Math.floor(Math.random() * 12) + 1;
 
+      
       $("#top").html("The random number is: <br><br> " + randNumber);
-      $("#playerScore").html("Your score is: <br><br> 0");
+      $("#playerScore").html("<br>Your score is: <br><br> 0");
 
       };
 
       $("#button1").on("click", function() {
-        alert("Gem 1 is " + gem1);
+        //alert("Gem 1 is " + gem1);
         sum = sum + gem1;
-        $("#playerScore").html("Your score is: <br><br>" + sum);
+        $("#playerScore").html("<br>Your score is: <br><br>" + sum);
         gameOver();
         //$("#button1").html("<img id='PBJ' src='http://allthingsd.com/files/2012/08/peanut_butter_jelly430x300.jpeg'/>");
       });
 
       $("#button2").on("click", function() {
-        alert("Gem 2 is " + gem2);
+        //alert("Gem 2 is " + gem2);
         sum = sum + gem2;
-        $("#playerScore").html("Your score is: <br><br>" + sum);
+        $("#playerScore").html("<br>Your score is: <br><br>" + sum);
         gameOver();
         //$("#button2").html("<img id='Grilled Cheese' src='http://cdn.funcheap.com/wp-content/uploads/2014/04/The-Perfect-Grilled-Cheese-Sandwich-800-158111.jpg' />");
       });
 
       $("#button3").on("click", function() {
-        alert("Gem 3 is " + gem3);
+        //alert("Gem 3 is " + gem3);
         sum = sum + gem3;
-        $("#playerScore").html("Your score is: <br><br>" + sum);
+        $("#playerScore").html("<br>Your score is: <br><br>" + sum);
         gameOver();
          //$("#button3").html("<img id='Roast Beef' src='https://www.cscassets.com/recipes/wide_cknew/wide_25336.jpg' />");
       });
 
       $("#button4").on("click", function() {
-        alert("Gem 4 is " + gem4);
+       //alert("Gem 4 is " + gem4);
         sum = sum + gem4;
-        $("#playerScore").html("Your score is: <br><br>" + sum);
+        $("#playerScore").html("<br>Your score is: <br><br>" + sum);
         gameOver();
       });
 
       
-
+      //checks if the total sum is equal to random num. if it is
+      //game is over and update the wins. if its more than the random num, then
+      //player loses and updates the losses
       function gameOver() {
         if (sum === randNumber) {
           alert("Congratulations. You win!");
           numWins++;
-          console.log(numWins);
           $("#wins").html("<br>" + numWins + "<br>");
-          console.log(sum);
+          //console.log(sum);
           reset();
-          console.log("after" + sum);
         }
         else if(sum > randNumber) {
           alert("Uh oh, you lost. Press OK to continue");
           numLosses++;
           $("#losses").html("<br>" + numLosses + "<br>");
-          console.log(sum);
+          
           reset();
-          console.log("after" + sum);
+          //console.log("after" + sum);
         }
       };
 
